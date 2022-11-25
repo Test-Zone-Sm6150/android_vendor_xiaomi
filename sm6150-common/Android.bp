@@ -674,6 +674,27 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libdirac",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/soundfx/libdirac.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/soundfx/libdirac.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	relative_install_path: "soundfx",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "vendor.qti.hardware.vpp@1.1",
 	owner: "xiaomi",
 	strip: {
@@ -1564,6 +1585,24 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/soundfx/libasphere.so"],
+		},
+	},
+	compile_multilib: "32",
+	check_elf_files: false,
+	relative_install_path: "soundfx",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libmisoundfx",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/soundfx/libmisoundfx.so"],
 		},
 	},
 	compile_multilib: "32",
@@ -5417,6 +5456,18 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+	name: "cnss-daemon",
+	owner: "xiaomi",
+	srcs: ["proprietary/vendor/bin/cnss-daemon"],
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_binary {
 	name: "dpmQmiMgr",
 	owner: "xiaomi",
 	srcs: ["proprietary/vendor/bin/dpmQmiMgr"],
@@ -5460,8 +5511,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	relative_install_path: "hw",
 	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 
@@ -5473,8 +5524,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	relative_install_path: "hw",
 	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 
@@ -5486,8 +5537,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	relative_install_path: "hw",
 	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 
@@ -5499,8 +5550,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	relative_install_path: "hw",
 	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 
@@ -5512,8 +5563,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	relative_install_path: "hw",
 	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 
@@ -5525,8 +5576,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	relative_install_path: "hw",
 	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 
@@ -5538,8 +5589,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	relative_install_path: "hw",
 	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 
@@ -5551,8 +5602,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	relative_install_path: "hw",
 	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 
@@ -5564,8 +5615,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	relative_install_path: "hw",
 	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 
